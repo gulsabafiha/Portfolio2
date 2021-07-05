@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lato',sans-serif; 
+}
+:root{
+    --color:rgb(235,180,66);
+}
+.continer{
+    display: flex;
+    margin: 2rem;
+}
+.continer .left{
+    padding-top: 9rem;
+    padding-left: 5rem;
+    line-height: 4rem;
+}
+.continer .left h1{
+    color:var(--color) ;
+    font-size: 3rem;
+}
+.continer .left h3,p{
+    color: whitesmoke;
+}
+.continer .left a{
+    text-decoration: none;
+    color: var(--color) ;
+    border: 2px solid;
+    border-color: rgba(143, 141, 136, 0.9);
+    border-style: double;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+.continer .left .a{
+    margin-top: 2rem;
+}
+.hero{
+   margin-top: 0;
+   background-color: var(--color);
+    background-image: linear-gradient(to right, black 60%,var(--color)50%);
+    height: 100%;
+}
+.right img{
+    padding-left: 12rem;
+}
