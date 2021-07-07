@@ -1,115 +1,201 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    font-family: 'Lato',sans-serif; 
+body {
+  font-family: "Lato", sans-serif;
 }
-:root{
-    --color:rgb(235,180,66);
+:root {
+  --color: rgb(235, 180, 66);
 }
-.container{
-    display: flex;
-    margin: 2rem;
+.container {
+  display: flex;
+  margin: 0 2rem;
 }
-.container .left{
-    padding-top: 9rem;
-    padding-left: 5rem;
-    line-height: 4rem;
+.container .left {
+  padding-top: 5rem;
+  padding-left: 5rem;
+  line-height: 4rem;
 }
-.container .left h1{
-    color:var(--color) ;
-    font-size: 3rem;
+.container .left h1 {
+  color: var(--color);
+  font-size: 4rem;
 }
-.container .left h3,p{
-    color: whitesmoke;
+.container .left h3,
+p {
+  color: whitesmoke;
+  font-size: 1.5rem;
 }
-.container .left a{
-    text-decoration: none;
-    color: var(--color) ;
-    border: 2px solid;
-    border-color: rgba(143, 141, 136, 0.9);
-    border-style: double;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
+.btn {
+  text-decoration: none;
+  color: var(--color);
+  border: 2px solid;
+  border-color: rgba(143, 141, 136, 0.9);
+  border-style: double;
+  padding: 1rem 4rem;
+  transition: ease 1s;
 }
-.container .left .a{
-    margin-top: 2rem;
+.btn:hover {
+  color: rgb(250, 244, 244);
+  background-color: var(--color);
+  padding: 1.5rem 5rem;
 }
-.hero{
-   margin-top: 0;
-   background-color: var(--color);
-    background-image: linear-gradient(to right, black 60%,var(--color)50%);
-    height: 100%;
+.container .left .a {
+  margin-top: 2rem;
 }
-.right img{
-    padding-left: 7rem;
+.hero {
+  margin-top: 0;
+  background-color: var(--color);
+  background-image: linear-gradient(to right, black 60%, var(--color) 50%);
+  height: 100%;
 }
-
+.right img {
+  margin-left: -5rem;
+ margin-bottom: -0.2rem;
+}
 
 /*********About*******/
 
-.container-sec{
-    display: flex;
-    margin: 2rem;
-    justify-content: center;
+.container-sec {
+  display: flex;
+  margin: 2rem;
+  justify-content: center;
 }
-.about{
-    background-color: black;
-    margin-top: -2rem;
+
+.about {
+  background-color: rgb(29, 26, 26);
+  margin-top: -2rem;
 }
-.about .right-img{
+.about .right-img {
   border: 10px solid;
   border-color: gray;
   box-shadow: 10px 10px;
   height: 450px;
   width: 300px;
-  margin-top: 7rem;
+  margin-top: 8rem;
   background-color: whitesmoke;
-  outline-style: solid;
-  outline-width: 0.5rem;
-  outline-offset: 10px;
+}
+.about .container-sec .right-img img {
+  padding-left: -3rem;
+  margin-left: -6.5rem;
+  margin-top: -3rem;
+}
+.about .container-sec .content {
+  margin-top: 12rem;
+  margin-left: 4rem;
+}
+.half-a-border-on-top {
+  border-bottom: 1px solid var(--color);
+  position: relative;
+  color: var(--color);
+  font-size: 3rem;
+}
+.half-a-border-on-top:after {
+  padding: 0;
+  margin: 0;
+  display: block; /* probably not really needed? */
+  content: "";
+  width: 80%;
+  height: 1.1px;
+  background-color: rgb(29, 26, 26);
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+}
+.about .container-sec .content p {
+  color: rgb(202, 191, 191);
+  margin-top: 2rem;
+  line-height: 2rem;
+}
+.about .container-sec .content .anch {
+  display: flex;
+  margin-top: 4rem;
+  padding-left: 1rem;
+ 
+}
+.about .container-sec .content .anch #hire {
+  background-color: var(--color);
+  color: whitesmoke;
+  margin-right: 1rem;
+}
+.about .container-sec .content .anch #hire:hover{
+  background-color: rgba(143, 141, 136, 0.096);
+  color: var(--color);
+}
+/*--------image-shadow-------*/
+
+.image-background {
+  position: relative;
+  z-index: 1;
+  margin-left: 4rem;
+  margin-bottom: 3rem;
+}
+.image-background::before {
+  content: "";
+  left: -30px;
+  top: 180px;
+  position: absolute;
+  height: 450px;
+  width: 300px;
+  z-index: -1;
+  outline: 9px solid;
   outline-color: var(--color);
 }
-.about .container-sec .right-img img{
-    padding-left:-3rem ;
-    margin-left: -6.5rem;
-    margin-top: -3rem;
+
+/* Third section*/
+.third {
+  background-color: rgb(29, 26, 26);
+  margin-top: -2rem;
 }
-.about .container-sec .content{
-    margin-top: 12rem;
-    margin-left: 4rem;
+
+.container-third .content-third {
+  padding-left: 21rem;
+  padding-top: 12rem;
+  word-wrap: normal;
 }
-.about .container-sec .content h1{
-    color: whitesmoke;
-    font-size: 3rem;
-    border-bottom: 1px solid var(--color) ; 
+.container-third .work-parent .one,
+.two {
+  display: flex;
+  justify-content: center;
 }
-.about .container-sec .content p{
-    color: rgb(202, 191, 191);
-    margin-top: 2rem;
-    line-height: 2rem;
+.container-third .one .image {
+  height: 250px;
+  width: 330px;
+  padding-left: 2rem;
+  margin: 2rem 1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  transition: ease 1s;
 }
-.about .container-sec .content a{
-    margin-right: 1rem;
-    text-decoration: none;
-    color: var(--color) ;
-    border: 2px solid;
-    border-color: rgba(143, 141, 136, 0.9);
-    border-style: double;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
+.container-third .one .image:hover {
+  height: 300px;
 }
-.about .container-sec .content .anch{
-    display: flex;
-    margin-top: 4rem;
-    padding-left: 1rem;
+.container-third .one .image:hover .text {
+  visibility: visible;
 }
-.about .container-sec .content .anch #hire{
-    background-color: var(--color);
-    color: whitesmoke;
+.container-third .work-parent .one #first {
+  background-image: linear-gradient(rgb(64, 154, 240), rgb(0, 220, 251)),
+    url(img/laptop-table.jpg);
+}
+.container-third .work-parent .one #second {
+  background-image: linear-gradient(rgb(209, 150, 56), rgb(253, 214, 93)),
+    url(img/laptop-table.jpg);
+}
+.container-third .work-parent .two #third {
+  background-image: linear-gradient(rgb(172, 62, 203), rgb(247, 89, 180)),
+    url(img/laptop-table.jpg);
+}
+.container-third .work-parent .two #fourth {
+  background-image: linear-gradient(
+      rgba(0, 210, 88, 0.897),
+      rgba(0, 198, 145, 0.788)
+    ),
+    url(img/laptop-table.jpg);
+}
+.container-third .text {
+  text-align: center;
+  padding-top: 4rem;
+  visibility: hidden;
+  transition: ease 1s;
 }
